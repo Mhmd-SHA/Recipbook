@@ -146,6 +146,7 @@ class _LoginPageState extends State<LoginPage> {
                       bool result = await AuthService()
                           .login(username.text, password.text);
 
+                      print(result);
                       if (result) {
                         StatusAlert.show(
                           context,

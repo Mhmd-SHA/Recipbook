@@ -20,7 +20,6 @@ class DataService {
     if (response!.statusCode == 200 && response.data != null) {
       List data = response.data["recipes"];
       List<Recipoe> recipes = data.map((e) => Recipoe.fromJson(e)).toList();
-      print(recipes);
       return recipes;
     }
   }
