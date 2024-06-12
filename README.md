@@ -32,9 +32,11 @@ ps- only the ui part is done . add more logics if you wish to contribute
   <img src="/img_9.png" width="250"  alt=""/>
 
 </p>
-(img_10.png)
-![img_11.png](img_11.png)
-![img_12.png](img_12.png)
+
+<img src="/img_10.png"  alt=""/>
+<img src="/img_11.png"  alt=""/>
+<img src="/img_12.png"  alt=""/>
+
 
 
 
@@ -43,7 +45,7 @@ ps- only the ui part is done . add more logics if you wish to contribute
 
 1. **Clone the repository**
    ```terminal
-   git clone https://github.com/yourusername/recipbook.git
+   git clone https://github.com/Mhmd-SHA/Recipbook.git
    ```
 
 2. **Navigate to the project directory**
