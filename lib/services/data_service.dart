@@ -11,7 +11,7 @@ class DataService {
 
   DataService._internal();
 
-  Future<List<Recipoe>?> getrecipe(String filter) async {
+  Future<List<Recipe>?> getrecipe(String filter) async {
     String path = "recipes/";
     if (filter.isNotEmpty) {
       path += "meal-type/$filter";
@@ -19,8 +19,33 @@ class DataService {
     var response = await _HttpService.get(path);
     if (response!.statusCode == 200 && response.data != null) {
       List data = response.data["recipes"];
-      List<Recipoe> recipes = data.map((e) => Recipoe.fromJson(e)).toList();
+      List<Recipe> recipes = data.map((e) => Recipe.fromJson(e)).toList();
       return recipes;
+    }
+  }
+
+  //  Future<List<Recipoe>?> getrecipe(String filter) async {
+  //   String path = "recipes/";
+  //   if (filter.isNotEmpty) {
+  //     path += "meal-type/$filter";
+  //   }
+  //   var response = await _HttpService.get(path);
+  //   if (response!.statusCode == 200 && response.data != null) {
+  //     List data = response.data["recipes"];
+  //     List<Recipoe> recipes = data.map((e) => Recipoe.fromJson(e)).toList();
+  //     return recipes;
+  //   }
+  // }
+
+  Future<List<String>?> getRecipeCategories() async {
+    String path = "recipes/tags";
+    var response = await _HttpService.get(path);
+    if (response!.statusCode == 200 && response.data != null) {
+      List data = response.data;
+
+      List<String> categories = data.cast<String>();
+
+      return categories;
     }
   }
 }

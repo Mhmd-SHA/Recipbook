@@ -1,4 +1,6 @@
-class Recipoe {
+import 'package:equatable/equatable.dart';
+
+class Recipe extends Equatable {
   int id;
   String name;
   List<String> ingredients;
@@ -16,7 +18,7 @@ class Recipoe {
   int reviewCount;
   List<String> mealType;
 
-  Recipoe({
+  Recipe({
     required this.id,
     required this.name,
     required this.ingredients,
@@ -35,7 +37,7 @@ class Recipoe {
     required this.mealType,
   });
 
-  Recipoe copyWith({
+  Recipe copyWith({
     int? id,
     String? name,
     List<String>? ingredients,
@@ -53,7 +55,7 @@ class Recipoe {
     int? reviewCount,
     List<String>? mealType,
   }) =>
-      Recipoe(
+      Recipe(
         id: id ?? this.id,
         name: name ?? this.name,
         ingredients: ingredients ?? this.ingredients,
@@ -72,7 +74,7 @@ class Recipoe {
         mealType: mealType ?? this.mealType,
       );
 
-  factory Recipoe.fromJson(Map<String, dynamic> json) => Recipoe(
+  factory Recipe.fromJson(Map<String, dynamic> json) => Recipe(
         id: json["id"],
         name: json["name"],
         ingredients: List<String>.from(json["ingredients"].map((x) => x)),
@@ -109,4 +111,8 @@ class Recipoe {
         "reviewCount": reviewCount,
         "mealType": List<dynamic>.from(mealType.map((x) => x)),
       };
+
+  @override
+  // TODO: implement props
+  List<Object?> get props => [id, name];
 }
