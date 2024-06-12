@@ -32,7 +32,7 @@ ps- only the ui part is done . add more logics if you wish to contribute
   <img src="/img_9.png" width="250"  alt=""/>
 
 </p>
-![img_10.png](img_10.png)
+(img_10.png)
 ![img_11.png](img_11.png)
 ![img_12.png](img_12.png)
 
