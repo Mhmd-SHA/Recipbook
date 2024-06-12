@@ -23,7 +23,6 @@ ps- only the ui part is done . add more logics if you wish to contribute
   <img src="/img.png" width="250"  alt=""/>
   <img src="/img_1.png" width="250"  alt=""/> 
   <img src="/img_2.png" width="250"  alt=""/>
-  <img src="/img_3.png" width="250"  alt=""/>
   <img src="/img_4.png" width="250"  alt=""/>
   <img src="/img_5.png" width="250"  alt=""/>
   <img src="/img_6.png" width="250"  alt=""/>
